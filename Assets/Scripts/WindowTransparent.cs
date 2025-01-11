@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.InteropServices;
 using System;
+//https://www.youtube.com/watch?v=RqgsGaMPZTw
 
 public class WindowTransparent : MonoBehaviour
 {
@@ -34,21 +35,22 @@ public class WindowTransparent : MonoBehaviour
     [DllImport("Dwmapi.dll")]
     private static extern uint DwmExtendFrameIntoClientArea(IntPtr hWnd, ref MARGINS margins);
     [DllImport("user32.dll")]
-    private static extern int SetLayeredWindowAttributes(IntPtr hwnd, uint crKey, byte bAlpha, uint dwFlags);
+    private static extern int SetLayeredWindowAttributes(IntPtr hWnd, uint crKey, byte bAlpha, uint dwFlags);
     private void Start()
     {
 #if !UNITY_EDITOR
         //MessageBox(new IntPtr(0),"Hello","Hello",0);
-        var margins = new MARGINS() { cxLeftWidth = -1 };
+        MARGINS margins = new MARGINS { cxLeftWidth = -1 };
  
         // Get a handle to the window
-        var hwnd = GetActiveWindow();
+        IntPtr hwnd = GetActiveWindow();
  
         // Extend the window into the client area
         DwmExtendFrameIntoClientArea(hwnd, ref margins);
         // Set properties of the window
         SetWindowLong(hwnd, GWL_EXSTYLE, WS_EX_LAYERED | WS_EX_TRANSPARENT);
         SetLayeredWindowAttributes(hwnd,0,0,LWA_COLORKEY);
+
         SetWindowPos(hwnd, HWND_TOPMOST,0,0,0,0,0);
       
 #endif
