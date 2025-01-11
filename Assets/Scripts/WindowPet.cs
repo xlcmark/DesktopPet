@@ -52,9 +52,7 @@ public class WindowPet : MonoBehaviour
 
     void Start()
     {
-        //Screen.SetResolution(1920, 1080, true);
-
-        // 下方程式應確保不在編輯模式下執行，要打包成執行檔再執行
+        
 #if !UNITY_EDITOR
         window = GetActiveWindow();
 
@@ -81,4 +79,5 @@ public class WindowPet : MonoBehaviour
         Application.runInBackground = true;
 #endif
     }
+    
 }
