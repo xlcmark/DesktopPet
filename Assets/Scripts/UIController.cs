@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UniVRM10;
 
 public class UIController : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class UIController : MonoBehaviour
     [SerializeField] TMP_InputField inputField;
     private TextMeshProUGUI switchModeBtnTxt;
     private bool isDesktopPetMode;
+    [Header("ExpressionBtn")]
+    [SerializeField]Button happyBtn;
+    [SerializeField]Button angryBtn;
+    [SerializeField]Button sadBtn;
+    [SerializeField]Button surpriseBtn;
 
     void Start()
     {
@@ -22,6 +28,11 @@ public class UIController : MonoBehaviour
         switchModeBtn.onClick.AddListener(switchModeBtnFun);
 
         switchModeBtnFun();
+        
+        happyBtn.onClick.AddListener(() => EventManager.ExpressionChanged(ExpressionKey.Happy));
+        angryBtn.onClick.AddListener(() => EventManager.ExpressionChanged(ExpressionKey.Angry));
+        sadBtn.onClick.AddListener(() => EventManager.ExpressionChanged(ExpressionKey.Sad));
+        surpriseBtn.onClick.AddListener(() => EventManager.ExpressionChanged(ExpressionKey.Surprised));
     }
     private void switchModeBtnFun()
     {

@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88684271e27adb843b6570957c9e7637, type: 3}
+  m_Name: _vrm1_
+  m_EditorClassIdentifier: 
+  m_prefab: {fileID: -1728013695380148634, guid: 437d746b0d3c24807aa5c39a6b64184a, type: 3}
+  Meta:
+    Name: AvatarSample_N_VRM10
+    Version: 1
+    Authors:
+    - pixiv VRoid Project
+    - VRM10
+    CopyrightInformation: 
+    ContactInformation: 
+    References: []
+    ThirdPartyLicenses: 
+    Thumbnail: {fileID: 2800000, guid: d086dffaf0c6e4a62a554d664beaae5b, type: 3}
+    AvatarPermission: 2
+    ViolentUsage: 1
+    SexualUsage: 1
+    CommercialUsage: 2
+    PoliticalOrReligiousUsage: 1
+    AntisocialOrHateUsage: 1
+    CreditNotation: 1
+    Redistribution: 1
+    Modification: 2
+    OtherLicenseUrl: https://vroid.pixiv.help/hc/ja/articles/4402394424089-AvatarSample-A-Z
+  Expression:
+    Happy: {fileID: 11400000, guid: a0770aff444364c048a880badec493ef, type: 2}
+    Angry: {fileID: 11400000, guid: cda67aedcdd934722afddc1356ba18fc, type: 2}
+    Sad: {fileID: 11400000, guid: e6204f2e7126c452cbc37f540f333009, type: 2}
+    Relaxed: {fileID: 11400000, guid: 0880b6e2d76f046ceb89cdf0fc66012a, type: 2}
+    Surprised: {fileID: 11400000, guid: 979dc6361300943e2ac35afe12258d25, type: 2}
+    Aa: {fileID: 11400000, guid: d4a6568b1830541e5b5eceae60c3dda2, type: 2}
+    Ih: {fileID: 11400000, guid: dae01161ce5b14cb39421f5754b4adba, type: 2}
+    Ou: {fileID: 11400000, guid: 55baa7456b04d49da9a30e9636795cf7, type: 2}
+    Ee: {fileID: 11400000, guid: 980a629ad599546fcac6eec661746e47, type: 2}
+    Oh: {fileID: 11400000, guid: 39ab1e03c599e49c89f20b476e48208d, type: 2}
+    Blink: {fileID: 11400000, guid: f019bc8d771da4e089252d9db611f3f7, type: 2}
+    BlinkLeft: {fileID: 11400000, guid: 98cac7b4de3fc4ea7adbeb09c8bf9c77, type: 2}
+    BlinkRight: {fileID: 11400000, guid: b6b0cd75344cf4c81854a9afdb13552d, type: 2}
+    LookUp: {fileID: 11400000, guid: 43bb3f93296694811b48fed06ef57728, type: 2}
+    LookDown: {fileID: 11400000, guid: 3bd7a10d56ca742f79bdbb66d59c16e6, type: 2}
+    LookLeft: {fileID: 11400000, guid: 3ec25292d937744dfaf239c88bd49a02, type: 2}
+    LookRight: {fileID: 11400000, guid: e1bda078830114363ab6353ef2380330, type: 2}
+    Neutral: {fileID: 11400000, guid: 7627bd97b77a4461886920121708ac50, type: 2}
+    CustomClips:
+    - {fileID: 11400000, guid: 0807097849ef6444c9211ffb87ae8a5e, type: 2}
+  LookAt:
+    OffsetFromHead: {x: -0, y: 0.06, z: 0}
+    LookAtType: 0
+    HorizontalOuter:
+      CurveXRangeDegree: 90
+      CurveYRangeDegree: 12
+    HorizontalInner:
+      CurveXRangeDegree: 90
+      CurveYRangeDegree: 8
+    VerticalDown:
+      CurveXRangeDegree: 90
+      CurveYRangeDegree: 10
+    VerticalUp:
+      CurveXRangeDegree: 90
+      CurveYRangeDegree: 10
+  FirstPerson:
+    Renderers:
+    - Renderer: Face
+      FirstPersonFlag: 0
+    - Renderer: Body
+      FirstPersonFlag: 0
+    - Renderer: Hair
+      FirstPersonFlag: 0
